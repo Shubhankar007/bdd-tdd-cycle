@@ -28,4 +28,4 @@
 = link_to 'Add new movie', new_movie_path
 %p
   Download:
-  \#{link_to "CSV", movie_path(params.merge(format: 'csv'))}
+  \#{link_to "CSV", download_path(params.merge(format: 'csv'))}

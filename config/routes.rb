@@ -13,6 +13,7 @@ Rottenpotatoes::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   root :to => redirect('/movies')
+  get 'CSV', to: 'movies#index', as: :download
   resources :movies
   match "/movies/:id/check_director/(.:format)" => "movies#check_director", :as => :check_director
   # Sample resource route with options:
